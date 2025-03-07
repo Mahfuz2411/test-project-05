@@ -835,6 +835,9 @@
   .bg-\[url\(\'\.\/\'\)\] {
     background-image: url('./');
   }
+  .bg-\[url\(\'\.\/assets\/images\/cleaning1\.jpg\'\)\] {
+    background-image: url('./assets/images/cleaning1.jpg');
+  }
   .bg-\[url\(\'\/assets\/images\/cle\.jpg\'\)\] {
     background-image: url('/assets/images/cle.jpg');
   }

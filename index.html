@@ -14,6 +14,21 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Customize Swiper Navigation Buttons */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body class="flex flex-col items-center justify-between">
@@ -406,6 +421,116 @@
                 <img src="./assets/images/st1.png" alt="" class="w-full">
             </div>
         </div>
+    </section>
+
+    <section class="bg-[#113D3C] flex justify-center items-center px-5 py-20 rounded-3xl">
+    
+        <div class="w-full max-w-6xl">
+            <h2 class="text-center text-white text-3xl font-semibold mb-6">Hear What Our Customers Have to Say</h2>
+    
+            <!-- Swiper Slider Container -->
+            <div class="relative">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+    
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row gap-6">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                    class="w-32 h-32 object-cover rounded-xl" alt="User">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Outstanding results <br> <span
+                                            class="text-gray-600">every time!</span></h3>
+                                    <p class="text-gray-500 mt-2">I've been using HomeMaster for my home cleaning needs for
+                                        over a year now, and they consistently deliver outstanding results.</p>
+                                    <div class="mt-4 font-semibold">David Williams</div>
+                                    <p class="text-sm text-gray-400">Marketing Manager</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row gap-6">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg"
+                                    class="w-32 h-32 object-cover rounded-xl" alt="User">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Outstanding results <br> <span
+                                            class="text-gray-600">every time!</span></h3>
+                                    <p class="text-gray-500 mt-2">I've been using HomeMaster for my home cleaning needs for
+                                        over a year now, and they consistently deliver outstanding results.</p>
+                                    <div class="mt-4 font-semibold">Emily Johnson</div>
+                                    <p class="text-sm text-gray-400">Founder</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row gap-6">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg"
+                                    class="w-32 h-32 object-cover rounded-xl" alt="User">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Fantastic service! <br> <span
+                                            class="text-gray-600">Highly recommended!</span></h3>
+                                    <p class="text-gray-500 mt-2">HomeMaster has been my go-to for cleaning services. Their
+                                        team is friendly, and their work is top-notch.</p>
+                                    <div class="mt-4 font-semibold">Michael Smith</div>
+                                    <p class="text-sm text-gray-400">Business Owner</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row gap-6">
+                                <img src="https://randomuser.me/api/portraits/women/50.jpg"
+                                    class="w-32 h-32 object-cover rounded-xl" alt="User">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Highly professional <br> <span
+                                            class="text-gray-600">and reliable!</span></h3>
+                                    <p class="text-gray-500 mt-2">I am impressed with their attention to detail. Their
+                                        service is fantastic.</p>
+                                    <div class="mt-4 font-semibold">Sophia Miller</div>
+                                    <p class="text-sm text-gray-400">CEO, TechCorp</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-prev absolute top-1/2 -left-5 transform -translate-y-1/2"></div>
+                <div class="swiper-button-next absolute top-1/2 -right-5 transform -translate-y-1/2"></div>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="swiper-pagination mt-4"></div>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: { slidesPerView: 1 },  // Small screens
+                    768: { slidesPerView: 2 },  // Medium screens
+                    1024: { slidesPerView: 2 }  // Large screens
+                }
+            });
+        </script>
+    
     </section>
 
     <section class="py-20 flex items-center justify-center w-full md:pb-48 lg:pb-60">
